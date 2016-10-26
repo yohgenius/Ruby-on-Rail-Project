@@ -32,7 +32,7 @@
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav navbar-right">
             <li><a href=home>Home</a></li>
-            <li><a href=articles>Articles</a></li>
+            <li><a href=articles>Article</a></li>
             <li><a href=gallery>Gallery</a></li>
           </ul>
         </div>  
@@ -40,27 +40,9 @@
     </div> 
     <!-- Put Navigation bar here  -->
     <!-- Bagian Content -->
-     <% @articles.each do |article| %>
-
-<h3><%= article.title %></h3>
-
-<p><%= article.content.truncate(20) %>
-   <%= link_to 'read more', article_path(article.id) %>
-</p>
-
-<h4>status : <%= article.status %></h4>
-
-<p>
-
-    <span><%= link_to 'edit', edit_article_path(article.id) %></span>
- <span> | </span>
-
-    <span><%= link_to 'delete', article_path(article.id), method: "DELETE", data: {confirm: 'Delete this data ? '} %></span>
-</p>
-<hr/>
-<% end %>
+ 
     <!--Put Content website here -->
-
+<h1>Ini adalah halaman gallery</h1>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="assets/javascripts/jquery-1-11-1.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->

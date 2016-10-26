@@ -1,10 +1,17 @@
 Gentra::Application.routes.draw do
+
+  get "home/index"
   get "comments/index"
   get "comments/new"
   get "comments/edit"
-    root :to => "articles#index"
+  root :to => "home#index"
+  get "sign_up" => "users#new", :as => "sign_up"
 
+    resources :users
     resources :articles
+    resources :comments
+    resources :home
+    resources :gallery
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

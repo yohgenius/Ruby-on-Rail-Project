@@ -1,8 +1,15 @@
+<div id="main-content" class="col-xs-12 col-sm-9 main pull-right">
 <%= form_for @article do |f| %>
 
+         <div class="panel-body">
+            <form class="form-horizontal ">
+          <div class="form-group">
 <%= f.label :title %>
 
+            <div class="col-sm-7">
 <%= f.text_field :title %>
+            </div>
+          </div>
 
 <br/>
 
@@ -27,7 +34,6 @@
 <%= f.submit :submit %>
 
 <% end %>
-
 
 <div>
 
