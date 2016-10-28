@@ -1,13 +1,6 @@
 class CommentsController < ApplicationController
-  def index
-  end
 
-  def new
-  end
-
-  def edit
-  end
-      before_action :check_current_user, only: [:new, :create, :edit, :update, :destroy]
+    before_action :check_current_user, only: [:new, :create, :edit, :update, :destroy]
 
 
         def create
@@ -38,4 +31,12 @@ class CommentsController < ApplicationController
                 params.require(:comment).permit(:article_id, :user_id, :content, :status)
 
             end
+  def index
+  end
+
+  def new
+  end
+
+  def edit
+  end
 end

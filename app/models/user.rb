@@ -29,4 +29,13 @@ class User < ActiveRecord::Base
     include Humanizer
 
     require_human_on :create
+    before_create :add_activation_token
+
+    def add_activation_token
+
+        self.activation_token = SecureRandom.urlsafe_base64
+
+        self.activation_status = "not activated"
+
+    end
 end

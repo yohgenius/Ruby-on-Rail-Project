@@ -1,12 +1,9 @@
 Gentra::Application.routes.draw do
 
-  get "home/index"
-  get "comments/index"
-  get "comments/new"
-  get "comments/edit"
   root :to => "home#index"
   get "sign_up" => "users#new", :as => "sign_up"
-
+    
+    resources :sessions
     resources :users
     resources :articles
     resources :comments

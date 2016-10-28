@@ -26,4 +26,18 @@ Gentra::Application.configure do
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
   config.assets.debug = true
+    
+     #config mailer with port 465
+
+    config.action_mailer.raise_delivery_errors = true
+
+config.action_mailer.delivery_method = :smtp
+config.action_mailer.smtp_settings = {
+  :user_name => '98b62451ecd348',
+  :password => 'b0724f06b6c269',
+  :address => 'mailtrap.io',
+  :domain => 'mailtrap.io',
+  :port => '2525',
+  :authentication => :cram_md5
+}
 end

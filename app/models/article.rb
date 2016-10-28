@@ -1,6 +1,5 @@
 class Article < ActiveRecord::Base
 validates :title, presence: true,
-
                             length: { minimum: 5 }
 
         validates :content, presence: true,
@@ -9,4 +8,7 @@ validates :title, presence: true,
 
         validates :status, presence: true
         default_scope {where(status: 'active')}
+        #name relation must plural
+
+        has_many :comments, dependent: :destroy
 end
