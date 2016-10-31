@@ -1,3 +1,2 @@
-$('#articles').html("<%= j(render @articles) %>");
-
-$('#direction').prop("checked",!$("#direction").prop("checked"));
+$('#articles').html("<%= j(render @articles)%>");
+$('.paginate').html("<%= j(paginate @articles)%>");

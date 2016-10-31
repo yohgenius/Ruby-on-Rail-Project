@@ -9,6 +9,7 @@ Gentra::Application.routes.draw do
     resources :comments
     resources :home
     resources :gallery
+    resources :entries, defaults: { format: 'json' }
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

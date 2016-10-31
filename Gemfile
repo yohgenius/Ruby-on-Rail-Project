@@ -6,6 +6,11 @@ gem 'rails', '4.0.6'
 # Use postgresql as the database for Active Record
 gem 'pg'
 
+#excel reporting
+gem 'rubyzip', '~> 1.1.0'
+gem 'axlsx', '2.1.0.pre'
+gem 'axlsx_rails'
+
 #Used to encrypt password
 gem 'bcrypt', require: 'bcrypt'
 

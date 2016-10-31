@@ -1,7 +1,4 @@
-<tr>
-
-  <td><%= article.title.titleize %></td>
-
-  <td><%= truncate(article.content, :length => 50, :separator => ' ') %></td>
-
-</tr>
+<article>
+    <%= article.title.titleize %>
+    <%= truncate(article.content, :length=>50, :separator=>'') %>
+</article>
